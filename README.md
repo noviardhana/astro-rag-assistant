@@ -52,16 +52,12 @@ Formatted Answer + Sources
 
 ```
 project/
-├── app.py               # Streamlit UI
+├── app_stream.py        # Streamlit UI
 ├── config.py            # environment variables, embed_model, gemini_client
 ├── prompts.py           # _SYSTEM_INSTRUCTION, _PROMPT_TEMPLATE
 ├── rag_astro.py         # main RAG pipeline (classify→embed→retrieve→generate)
-├── data_collection.py   # NASA ADS API fetching (get_ads_papers, collect_astronomy_data)
-├── preprocessing.py     # text cleaning (clean_text, clean_dataframe)
-├── chunking.py          # document splitting (chunk_from_content)
-├── embedding.py         # vector generation (embed_chunks)
-├── chroma_store.py      # ChromaDB ingestion (store_to_chroma)
 ├── query.py             # semantic search utility (query_collection, print_results)
+├── notebook.ipnb        # Data retrieval through to embedding
 ├── requirements.txt     # Python dependencies
 ├── chroma_db/           # persistent ChromaDB vector store (excluded from Git)
 └── .env                 # API keys (excluded from Git)
@@ -81,7 +77,7 @@ project/
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/your-username/astrorag.git
+git clone https://github.com/your-username/astro-rag-assistant.git
 cd astrorag
 ```
 
@@ -123,11 +119,11 @@ If you need to rebuild the vector database from scratch, run the following steps
 
 | Step | Module | Function |
 |------|--------|----------|
-| 1. Fetch papers | `data_collection.py` | `collect_astronomy_data()` |
-| 2. Clean text | `preprocessing.py` | `clean_dataframe()` |
-| 3. Chunk abstracts | `chunking.py` | `chunk_from_content()` |
-| 4. Generate embeddings | `embedding.py` | `embed_chunks()` |
-| 5. Store to ChromaDB | `chroma_store.py` | `store_to_chroma()` |
+| 1. Fetch papers | `data_collection` | `collect_astronomy_data()` |
+| 2. Clean text | `preprocessing` | `clean_dataframe()` |
+| 3. Chunk abstracts | `chunking` | `chunk_from_content()` |
+| 4. Generate embeddings | `embedding` | `embed_chunks()` |
+| 5. Store to ChromaDB | `chroma_store` | `store_to_chroma()` |
 
 ---
 
