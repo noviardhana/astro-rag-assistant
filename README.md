@@ -108,7 +108,7 @@ MODEL_GEMINI=gemini-2.5-flash
 
 **5. Run the Streamlit app**
 ```bash
-streamlit run app.py
+streamlit run app_stream.py
 ```
 
 ---
