@@ -19,10 +19,8 @@ Thumbs.db
 .vscode/
 .idea/
 
-*.csv
 *.parquet
 *.pkl
 *.h5
 *.pt
 *.bin
-chroma_db/
